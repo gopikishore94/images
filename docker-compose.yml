@@ -6,9 +6,9 @@ services:
     container_name: web
     depends_on:
       - user
-      - catalogue
-      - cart
-      - mongo
+      # - catalogue
+      # - cart
+      # - mongo
   user:
     image: user:v1
     ports:
@@ -27,6 +27,6 @@ services:
   #     - 8082:8080
   #   container_name: cart
    
-  mongo:
-    image: mongo:v1
-    container_name: mongodb
+  # mongo:
+  #   image: mongo:v1
+  #   container_name: mongodb
