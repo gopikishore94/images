@@ -8,6 +8,8 @@ services:
       - user
       - catalogue
       - cart
+      - shipping
+      - payment
   user:
     image: user:v1
     ports:
@@ -39,3 +41,5 @@ services:
   shipping:
     image: shipping:v1
     container_name: shipping
+    depends_on:
+      - mysql
