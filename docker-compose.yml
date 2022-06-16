@@ -7,7 +7,7 @@ services:
     depends_on:
       - user
       - catalogue
-      # - cart
+      - cart
       - mongo
   user:
     image: user:v1
