@@ -21,12 +21,11 @@ services:
     ports:
       - 8081:8080
     container_name: catalogue
-
-  # cart:
-  #   image: cart:v1
-  #   ports:
-  #     - 8082:8080
-  #   container_name: cart 
+  cart:
+    image: cart:v1
+    ports:
+      - 8082:8080
+    container_name: cart 
   mongo:
     image: mongo:v1
     container_name: mongodb
