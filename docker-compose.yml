@@ -28,8 +28,8 @@ services:
     depends_on:
       - redis
   redis:
-  image: redis
-  container_name: redis
+    image: redis
+    container_name: redis
   mongo:
     image: mongo:v1
     container_name: mongodb
