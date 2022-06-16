@@ -4,11 +4,16 @@ services:
     ports:
       - 80:80
     container_name: web
-  cart:
-    image: cart:v1
+    depends_on:
+      - user
+      - catalogue
+      - cart
+      - mongo
+  user:
+    image: user:v1
     ports:
       - 8080:8080
-    container_name: cart
+    container_name: user
   catalogue:
     image: catalogue:v1
     ports:
@@ -16,6 +21,12 @@ services:
     container_name: catalogue
     depends_on:
       - mongodb
+  cart:
+    image: cart:v1
+    ports:
+      - 8082:8080
+    container_name: cart
+   
   mongo:
     image: mongo:v1
     container_name: mongodb
