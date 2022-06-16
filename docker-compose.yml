@@ -46,3 +46,6 @@ services:
   rabbirmq:
     image: rabbitmq
     container_name: rabbitmq
+  payment:
+    image: payment:v1
+    container_name: payment
