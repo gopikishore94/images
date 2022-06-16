@@ -33,3 +33,6 @@ services:
   mongo:
     image: mongo:v1
     container_name: mongodb
+  mysql:
+    image: mysql:v1
+    container_name: mysql
