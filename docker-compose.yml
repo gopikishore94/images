@@ -6,7 +6,7 @@ services:
     container_name: web
     depends_on:
       - user
-      # - catalogue
+      - catalogue
       # - cart
       - mongo
   user:
@@ -16,13 +16,12 @@ services:
     container_name: user
     depends_on:
       - mongodb
-  # catalogue:
-  #   image: catalogue:v1
-  #   ports:
-  #     - 8081:8080
-  #   container_name: catalogue
-  #   depends_on:
-  #     - mongodb
+  catalogue:
+    image: catalogue:v1
+    ports:
+      - 8081:8080
+    container_name: catalogue
+
   # cart:
   #   image: cart:v1
   #   ports:
