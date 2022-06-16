@@ -1,0 +1,11 @@
+services:
+  web:
+    image: web:v1
+    ports:
+      - 80:80
+    container_name: web
+  cart:
+    image: cart:v1
+    ports:
+      - 8080:8080
+    container_name: cart
