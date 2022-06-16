@@ -8,12 +8,14 @@ services:
       - user
       # - catalogue
       # - cart
-      # - mongo
+      - mongo
   user:
     image: user:v1
     ports:
       - 8080:8080
     container_name: user
+    depends_on:
+      - mongodb
   # catalogue:
   #   image: catalogue:v1
   #   ports:
@@ -25,8 +27,7 @@ services:
   #   image: cart:v1
   #   ports:
   #     - 8082:8080
-  #   container_name: cart
-   
-  # mongo:
-  #   image: mongo:v1
-  #   container_name: mongodb
+  #   container_name: cart 
+  mongo:
+    image: mongo:v1
+    container_name: mongodb
