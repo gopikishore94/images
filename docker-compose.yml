@@ -48,6 +48,8 @@ services:
     container_name: rabbitmq
   payment:
     image: payment:v1
+    ports:
+      - 8084:8080
     container_name: payment
     depends_on:
       - rabbitmq
