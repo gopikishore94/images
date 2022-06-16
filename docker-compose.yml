@@ -9,3 +9,8 @@ services:
     ports:
       - 8080:8080
     container_name: cart
+  catalogue:
+    image: catalogue:v1
+    ports:
+      - 8081:8080
+    container_name: catalogue
