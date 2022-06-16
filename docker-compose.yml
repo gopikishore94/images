@@ -8,7 +8,6 @@ services:
       - user
       - catalogue
       - cart
-      - mongo
   user:
     image: user:v1
     ports:
